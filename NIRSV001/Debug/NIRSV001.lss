@@ -1,0 +1,554 @@
+
+NIRSV001.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  0000042a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000003b6  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000003  00800100  00800100  0000042a  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000042a  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000045c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000c0  00000000  00000000  0000049c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000f94  00000000  00000000  0000055c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000b91  00000000  00000000  000014f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000006ff  00000000  00000000  00002081  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001ec  00000000  00000000  00002780  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000638  00000000  00000000  0000296c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000003f2  00000000  00000000  00002fa4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000a0  00000000  00000000  00003396  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 66 00 	jmp	0xcc	; 0xcc <__ctors_end>
+   4:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+   8:	0c 94 b5 00 	jmp	0x16a	; 0x16a <__vector_2>
+   c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  10:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  14:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  18:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  1c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  20:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  24:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  28:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  2c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  30:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  34:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  38:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  3c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  40:	0c 94 7a 00 	jmp	0xf4	; 0xf4 <__vector_16>
+  44:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  48:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  4c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  50:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  54:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  58:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  5c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  60:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  64:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  68:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  6c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  70:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  74:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  78:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  7c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  80:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  84:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  88:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  8c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  90:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  94:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  98:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  9c:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  a0:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  a4:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  a8:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  ac:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  b0:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  b4:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  b8:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  bc:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  c0:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  c4:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+  c8:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__bad_interrupt>
+
+000000cc <__ctors_end>:
+  cc:	11 24       	eor	r1, r1
+  ce:	1f be       	out	0x3f, r1	; 63
+  d0:	cf ef       	ldi	r28, 0xFF	; 255
+  d2:	d8 e0       	ldi	r29, 0x08	; 8
+  d4:	de bf       	out	0x3e, r29	; 62
+  d6:	cd bf       	out	0x3d, r28	; 61
+
+000000d8 <__do_clear_bss>:
+  d8:	21 e0       	ldi	r18, 0x01	; 1
+  da:	a0 e0       	ldi	r26, 0x00	; 0
+  dc:	b1 e0       	ldi	r27, 0x01	; 1
+  de:	01 c0       	rjmp	.+2      	; 0xe2 <.do_clear_bss_start>
+
+000000e0 <.do_clear_bss_loop>:
+  e0:	1d 92       	st	X+, r1
+
+000000e2 <.do_clear_bss_start>:
+  e2:	a3 30       	cpi	r26, 0x03	; 3
+  e4:	b2 07       	cpc	r27, r18
+  e6:	e1 f7       	brne	.-8      	; 0xe0 <.do_clear_bss_loop>
+  e8:	0e 94 04 01 	call	0x208	; 0x208 <main>
+  ec:	0c 94 d9 01 	jmp	0x3b2	; 0x3b2 <_exit>
+
+000000f0 <__bad_interrupt>:
+  f0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000f4 <__vector_16>:
+
+// Global Variable
+volatile uint8_t vect_cnt;
+volatile uint16_t timer_ms_counter;
+
+ISR(TIMER0_COMPA_vect) {
+  f4:	1f 92       	push	r1
+  f6:	0f 92       	push	r0
+  f8:	0f b6       	in	r0, 0x3f	; 63
+  fa:	0f 92       	push	r0
+  fc:	11 24       	eor	r1, r1
+  fe:	2f 93       	push	r18
+ 100:	3f 93       	push	r19
+ 102:	4f 93       	push	r20
+ 104:	5f 93       	push	r21
+ 106:	6f 93       	push	r22
+ 108:	7f 93       	push	r23
+ 10a:	8f 93       	push	r24
+ 10c:	9f 93       	push	r25
+ 10e:	af 93       	push	r26
+ 110:	bf 93       	push	r27
+ 112:	ef 93       	push	r30
+ 114:	ff 93       	push	r31
+	if (timer_ms_counter > 500){
+ 116:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 11a:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 11e:	85 3f       	cpi	r24, 0xF5	; 245
+ 120:	91 40       	sbci	r25, 0x01	; 1
+ 122:	48 f0       	brcs	.+18     	; 0x136 <__vector_16+0x42>
+		timer_ms_counter =0;
+ 124:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 128:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+		vect_cnt =0;
+ 12c:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <vect_cnt>
+		disable_MUX();
+ 130:	0e 94 9a 01 	call	0x334	; 0x334 <disable_MUX>
+ 134:	09 c0       	rjmp	.+18     	; 0x148 <__vector_16+0x54>
+	}
+	else
+		timer_ms_counter++;
+ 136:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 13a:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 13e:	01 96       	adiw	r24, 0x01	; 1
+ 140:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 144:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+}
+ 148:	ff 91       	pop	r31
+ 14a:	ef 91       	pop	r30
+ 14c:	bf 91       	pop	r27
+ 14e:	af 91       	pop	r26
+ 150:	9f 91       	pop	r25
+ 152:	8f 91       	pop	r24
+ 154:	7f 91       	pop	r23
+ 156:	6f 91       	pop	r22
+ 158:	5f 91       	pop	r21
+ 15a:	4f 91       	pop	r20
+ 15c:	3f 91       	pop	r19
+ 15e:	2f 91       	pop	r18
+ 160:	0f 90       	pop	r0
+ 162:	0f be       	out	0x3f, r0	; 63
+ 164:	0f 90       	pop	r0
+ 166:	1f 90       	pop	r1
+ 168:	18 95       	reti
+
+0000016a <__vector_2>:
+
+ISR(INT1_vect){
+ 16a:	1f 92       	push	r1
+ 16c:	0f 92       	push	r0
+ 16e:	0f b6       	in	r0, 0x3f	; 63
+ 170:	0f 92       	push	r0
+ 172:	11 24       	eor	r1, r1
+ 174:	2f 93       	push	r18
+ 176:	3f 93       	push	r19
+ 178:	4f 93       	push	r20
+ 17a:	5f 93       	push	r21
+ 17c:	6f 93       	push	r22
+ 17e:	7f 93       	push	r23
+ 180:	8f 93       	push	r24
+ 182:	9f 93       	push	r25
+ 184:	af 93       	push	r26
+ 186:	bf 93       	push	r27
+ 188:	cf 93       	push	r28
+ 18a:	ef 93       	push	r30
+ 18c:	ff 93       	push	r31
+	uint8_t portnr = ((PIND>>1)&0x01);		// Bitmask: Checking a bit PD1 for choice channel.
+ 18e:	89 b1       	in	r24, 0x09	; 9
+ 190:	81 fb       	bst	r24, 1
+ 192:	cc 27       	eor	r28, r28
+ 194:	c0 f9       	bld	r28, 0
+	switch(vect_cnt){
+ 196:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <vect_cnt>
+ 19a:	88 23       	and	r24, r24
+ 19c:	19 f0       	breq	.+6      	; 0x1a4 <__vector_2+0x3a>
+ 19e:	81 30       	cpi	r24, 0x01	; 1
+ 1a0:	91 f0       	breq	.+36     	; 0x1c6 <__vector_2+0x5c>
+ 1a2:	20 c0       	rjmp	.+64     	; 0x1e4 <__vector_2+0x7a>
+		case 0:{
+				disable_MUX();
+ 1a4:	0e 94 9a 01 	call	0x334	; 0x334 <disable_MUX>
+				timer_ms_counter =0;
+ 1a8:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 1ac:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+				if (portnr==0)
+ 1b0:	c1 11       	cpse	r28, r1
+ 1b2:	05 c0       	rjmp	.+10     	; 0x1be <__vector_2+0x54>
+				{
+					set_MUX(1);			// CH1 LED_IR 850nm
+ 1b4:	81 e0       	ldi	r24, 0x01	; 1
+ 1b6:	0e 94 9e 01 	call	0x33c	; 0x33c <set_MUX>
+					enable_MUX();
+ 1ba:	0e 94 96 01 	call	0x32c	; 0x32c <enable_MUX>
+				}
+				vect_cnt=1;
+ 1be:	81 e0       	ldi	r24, 0x01	; 1
+ 1c0:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <vect_cnt>
+				break;
+ 1c4:	0f c0       	rjmp	.+30     	; 0x1e4 <__vector_2+0x7a>
+		}
+		case 1:{
+				disable_MUX();
+ 1c6:	0e 94 9a 01 	call	0x334	; 0x334 <disable_MUX>
+				timer_ms_counter =0;
+ 1ca:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 1ce:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+				if (portnr==1)
+ 1d2:	c1 30       	cpi	r28, 0x01	; 1
+ 1d4:	29 f4       	brne	.+10     	; 0x1e0 <__vector_2+0x76>
+				{
+					set_MUX(2);			// CH2 LED_RED 750nm
+ 1d6:	82 e0       	ldi	r24, 0x02	; 2
+ 1d8:	0e 94 9e 01 	call	0x33c	; 0x33c <set_MUX>
+					enable_MUX();
+ 1dc:	0e 94 96 01 	call	0x32c	; 0x32c <enable_MUX>
+				}
+				vect_cnt =0;
+ 1e0:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <vect_cnt>
+				break;
+		}
+	}
+}
+ 1e4:	ff 91       	pop	r31
+ 1e6:	ef 91       	pop	r30
+ 1e8:	cf 91       	pop	r28
+ 1ea:	bf 91       	pop	r27
+ 1ec:	af 91       	pop	r26
+ 1ee:	9f 91       	pop	r25
+ 1f0:	8f 91       	pop	r24
+ 1f2:	7f 91       	pop	r23
+ 1f4:	6f 91       	pop	r22
+ 1f6:	5f 91       	pop	r21
+ 1f8:	4f 91       	pop	r20
+ 1fa:	3f 91       	pop	r19
+ 1fc:	2f 91       	pop	r18
+ 1fe:	0f 90       	pop	r0
+ 200:	0f be       	out	0x3f, r0	; 63
+ 202:	0f 90       	pop	r0
+ 204:	1f 90       	pop	r1
+ 206:	18 95       	reti
+
+00000208 <main>:
+
+int main(void)
+{
+ 208:	cf 93       	push	r28
+ 20a:	df 93       	push	r29
+ 20c:	1f 92       	push	r1
+ 20e:	cd b7       	in	r28, 0x3d	; 61
+ 210:	de b7       	in	r29, 0x3e	; 62
+	DDRA= 0b00111111;						// MUX Control Signal (PA0-PA3, Output), LED Signal (PA4-PA5, Output), ADC7 Signal Monitor (PA7, Input)
+ 212:	8f e3       	ldi	r24, 0x3F	; 63
+ 214:	81 b9       	out	0x01, r24	; 1
+	DDRB= 0b11100000;						// PGA Control Signal (PB0-PB4, Output)
+ 216:	80 ee       	ldi	r24, 0xE0	; 224
+ 218:	84 b9       	out	0x04, r24	; 4
+	DDRC= 0xFF;								// DAC Control Signal (Output, 8Bit word)
+ 21a:	8f ef       	ldi	r24, 0xFF	; 255
+ 21c:	87 b9       	out	0x07, r24	; 7
+	DDRD= 0b11000000;						// Control Signal from Mainboard (PD3-1), PWM Lock-In-Signal (PD7, Output), PGA Error Flag (PD0)
+ 21e:	80 ec       	ldi	r24, 0xC0	; 192
+ 220:	8a b9       	out	0x0a, r24	; 10
+	//DDRE= 0b00000000;						// SPI MISO PIN:PE2 INPUT others user defines
+	uint8_t current_DAC_level;
+	uint8_t PGA_gain;
+	
+	PWM_init();
+ 222:	0e 94 ca 01 	call	0x394	; 0x394 <PWM_init>
+	//Timer_init();
+	enable_LOCK_PWM();
+ 226:	0e 94 c1 01 	call	0x382	; 0x382 <enable_LOCK_PWM>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 22a:	2f e3       	ldi	r18, 0x3F	; 63
+ 22c:	8d e0       	ldi	r24, 0x0D	; 13
+ 22e:	93 e0       	ldi	r25, 0x03	; 3
+ 230:	21 50       	subi	r18, 0x01	; 1
+ 232:	80 40       	sbci	r24, 0x00	; 0
+ 234:	90 40       	sbci	r25, 0x00	; 0
+ 236:	e1 f7       	brne	.-8      	; 0x230 <main+0x28>
+ 238:	00 c0       	rjmp	.+0      	; 0x23a <main+0x32>
+ 23a:	00 00       	nop
+	_delay_ms(1000);
+	
+	set_DAC_level(1,&current_DAC_level);
+ 23c:	be 01       	movw	r22, r28
+ 23e:	6f 5f       	subi	r22, 0xFF	; 255
+ 240:	7f 4f       	sbci	r23, 0xFF	; 255
+ 242:	81 e0       	ldi	r24, 0x01	; 1
+ 244:	0e 94 54 01 	call	0x2a8	; 0x2a8 <set_DAC_level>
+	/* Replace with your application code */
+	
+	enable_MUX();
+ 248:	0e 94 96 01 	call	0x32c	; 0x32c <enable_MUX>
+ 24c:	83 ec       	ldi	r24, 0xC3	; 195
+ 24e:	99 e0       	ldi	r25, 0x09	; 9
+ 250:	01 97       	sbiw	r24, 0x01	; 1
+ 252:	f1 f7       	brne	.-4      	; 0x250 <main+0x48>
+ 254:	00 c0       	rjmp	.+0      	; 0x256 <main+0x4e>
+ 256:	00 00       	nop
+	_delay_ms(10);
+	//set_MUX(1);
+	PORTD|=(1<<7);
+ 258:	8b b1       	in	r24, 0x0b	; 11
+ 25a:	80 68       	ori	r24, 0x80	; 128
+ 25c:	8b b9       	out	0x0b, r24	; 11
+ 25e:	9f e3       	ldi	r25, 0x3F	; 63
+ 260:	2d e0       	ldi	r18, 0x0D	; 13
+ 262:	83 e0       	ldi	r24, 0x03	; 3
+ 264:	91 50       	subi	r25, 0x01	; 1
+ 266:	20 40       	sbci	r18, 0x00	; 0
+ 268:	80 40       	sbci	r24, 0x00	; 0
+ 26a:	e1 f7       	brne	.-8      	; 0x264 <main+0x5c>
+ 26c:	00 c0       	rjmp	.+0      	; 0x26e <main+0x66>
+ 26e:	00 00       	nop
+	_delay_ms(1000);
+	sei();
+ 270:	78 94       	sei
+	while (1)
+	{	
+		set_MUX(1);
+ 272:	81 e0       	ldi	r24, 0x01	; 1
+ 274:	0e 94 9e 01 	call	0x33c	; 0x33c <set_MUX>
+ 278:	87 e8       	ldi	r24, 0x87	; 135
+ 27a:	93 e1       	ldi	r25, 0x13	; 19
+ 27c:	01 97       	sbiw	r24, 0x01	; 1
+ 27e:	f1 f7       	brne	.-4      	; 0x27c <main+0x74>
+ 280:	00 c0       	rjmp	.+0      	; 0x282 <main+0x7a>
+ 282:	00 00       	nop
+		_delay_ms(20);
+		set_MUX(2);
+ 284:	82 e0       	ldi	r24, 0x02	; 2
+ 286:	0e 94 9e 01 	call	0x33c	; 0x33c <set_MUX>
+ 28a:	87 e8       	ldi	r24, 0x87	; 135
+ 28c:	93 e1       	ldi	r25, 0x13	; 19
+ 28e:	01 97       	sbiw	r24, 0x01	; 1
+ 290:	f1 f7       	brne	.-4      	; 0x28e <main+0x86>
+ 292:	00 c0       	rjmp	.+0      	; 0x294 <main+0x8c>
+ 294:	00 00       	nop
+ 296:	ed cf       	rjmp	.-38     	; 0x272 <main+0x6a>
+
+00000298 <LED1_on>:
+void enable_LOCK_PWM(){
+	TCCR2A |= (1<<COM2A0);				// Phase correct PWM Mode, Toggle OC1A on Compare Match
+}
+
+void disable_LOCK_PWM(){
+	TCCR2A &= ~(1<<COM2A0);				// Non PWM Mode, Normal port operation, OC1A disconnected
+ 298:	82 b1       	in	r24, 0x02	; 2
+ 29a:	80 61       	ori	r24, 0x10	; 16
+ 29c:	82 b9       	out	0x02, r24	; 2
+ 29e:	08 95       	ret
+
+000002a0 <LED2_on>:
+ 2a0:	82 b1       	in	r24, 0x02	; 2
+ 2a2:	80 62       	ori	r24, 0x20	; 32
+ 2a4:	82 b9       	out	0x02, r24	; 2
+ 2a6:	08 95       	ret
+
+000002a8 <set_DAC_level>:
+ 2a8:	82 30       	cpi	r24, 0x02	; 2
+ 2aa:	71 f1       	breq	.+92     	; 0x308 <set_DAC_level+0x60>
+ 2ac:	28 f4       	brcc	.+10     	; 0x2b8 <set_DAC_level+0x10>
+ 2ae:	88 23       	and	r24, r24
+ 2b0:	41 f0       	breq	.+16     	; 0x2c2 <set_DAC_level+0x1a>
+ 2b2:	81 30       	cpi	r24, 0x01	; 1
+ 2b4:	21 f1       	breq	.+72     	; 0x2fe <set_DAC_level+0x56>
+ 2b6:	08 95       	ret
+ 2b8:	83 30       	cpi	r24, 0x03	; 3
+ 2ba:	61 f1       	breq	.+88     	; 0x314 <set_DAC_level+0x6c>
+ 2bc:	84 30       	cpi	r24, 0x04	; 4
+ 2be:	81 f1       	breq	.+96     	; 0x320 <set_DAC_level+0x78>
+ 2c0:	08 95       	ret
+ 2c2:	fb 01       	movw	r30, r22
+ 2c4:	80 81       	ld	r24, Z
+ 2c6:	84 30       	cpi	r24, 0x04	; 4
+ 2c8:	21 f4       	brne	.+8      	; 0x2d2 <set_DAC_level+0x2a>
+ 2ca:	80 e8       	ldi	r24, 0x80	; 128
+ 2cc:	88 b9       	out	0x08, r24	; 8
+ 2ce:	83 e0       	ldi	r24, 0x03	; 3
+ 2d0:	80 83       	st	Z, r24
+ 2d2:	fb 01       	movw	r30, r22
+ 2d4:	80 81       	ld	r24, Z
+ 2d6:	83 30       	cpi	r24, 0x03	; 3
+ 2d8:	21 f4       	brne	.+8      	; 0x2e2 <set_DAC_level+0x3a>
+ 2da:	8f e7       	ldi	r24, 0x7F	; 127
+ 2dc:	88 b9       	out	0x08, r24	; 8
+ 2de:	82 e0       	ldi	r24, 0x02	; 2
+ 2e0:	80 83       	st	Z, r24
+ 2e2:	fb 01       	movw	r30, r22
+ 2e4:	80 81       	ld	r24, Z
+ 2e6:	82 30       	cpi	r24, 0x02	; 2
+ 2e8:	19 f4       	brne	.+6      	; 0x2f0 <set_DAC_level+0x48>
+ 2ea:	18 b8       	out	0x08, r1	; 8
+ 2ec:	81 e0       	ldi	r24, 0x01	; 1
+ 2ee:	80 83       	st	Z, r24
+ 2f0:	fb 01       	movw	r30, r22
+ 2f2:	80 81       	ld	r24, Z
+ 2f4:	81 30       	cpi	r24, 0x01	; 1
+ 2f6:	c9 f4       	brne	.+50     	; 0x32a <set_DAC_level+0x82>
+ 2f8:	18 b8       	out	0x08, r1	; 8
+ 2fa:	80 83       	st	Z, r24
+ 2fc:	08 95       	ret
+ 2fe:	18 b8       	out	0x08, r1	; 8
+ 300:	81 e0       	ldi	r24, 0x01	; 1
+ 302:	fb 01       	movw	r30, r22
+ 304:	80 83       	st	Z, r24
+ 306:	08 95       	ret
+ 308:	8f e7       	ldi	r24, 0x7F	; 127
+ 30a:	88 b9       	out	0x08, r24	; 8
+ 30c:	82 e0       	ldi	r24, 0x02	; 2
+ 30e:	fb 01       	movw	r30, r22
+ 310:	80 83       	st	Z, r24
+ 312:	08 95       	ret
+ 314:	80 e8       	ldi	r24, 0x80	; 128
+ 316:	88 b9       	out	0x08, r24	; 8
+ 318:	83 e0       	ldi	r24, 0x03	; 3
+ 31a:	fb 01       	movw	r30, r22
+ 31c:	80 83       	st	Z, r24
+ 31e:	08 95       	ret
+ 320:	8f ef       	ldi	r24, 0xFF	; 255
+ 322:	88 b9       	out	0x08, r24	; 8
+ 324:	84 e0       	ldi	r24, 0x04	; 4
+ 326:	fb 01       	movw	r30, r22
+ 328:	80 83       	st	Z, r24
+ 32a:	08 95       	ret
+
+0000032c <enable_MUX>:
+ 32c:	82 b1       	in	r24, 0x02	; 2
+ 32e:	8e 7f       	andi	r24, 0xFE	; 254
+ 330:	82 b9       	out	0x02, r24	; 2
+ 332:	08 95       	ret
+
+00000334 <disable_MUX>:
+ 334:	82 b1       	in	r24, 0x02	; 2
+ 336:	81 60       	ori	r24, 0x01	; 1
+ 338:	82 b9       	out	0x02, r24	; 2
+ 33a:	08 95       	ret
+
+0000033c <set_MUX>:
+ 33c:	82 30       	cpi	r24, 0x02	; 2
+ 33e:	69 f0       	breq	.+26     	; 0x35a <set_MUX+0x1e>
+ 340:	83 30       	cpi	r24, 0x03	; 3
+ 342:	a1 f0       	breq	.+40     	; 0x36c <set_MUX+0x30>
+ 344:	81 30       	cpi	r24, 0x01	; 1
+ 346:	e1 f4       	brne	.+56     	; 0x380 <set_MUX+0x44>
+ 348:	82 b1       	in	r24, 0x02	; 2
+ 34a:	89 7f       	andi	r24, 0xF9	; 249
+ 34c:	82 b9       	out	0x02, r24	; 2
+ 34e:	82 b1       	in	r24, 0x02	; 2
+ 350:	88 60       	ori	r24, 0x08	; 8
+ 352:	82 b9       	out	0x02, r24	; 2
+ 354:	0e 94 4c 01 	call	0x298	; 0x298 <LED1_on>
+ 358:	08 95       	ret
+ 35a:	82 b1       	in	r24, 0x02	; 2
+ 35c:	85 7f       	andi	r24, 0xF5	; 245
+ 35e:	82 b9       	out	0x02, r24	; 2
+ 360:	82 b1       	in	r24, 0x02	; 2
+ 362:	84 60       	ori	r24, 0x04	; 4
+ 364:	82 b9       	out	0x02, r24	; 2
+ 366:	0e 94 50 01 	call	0x2a0	; 0x2a0 <LED2_on>
+ 36a:	08 95       	ret
+ 36c:	82 b1       	in	r24, 0x02	; 2
+ 36e:	8d 7f       	andi	r24, 0xFD	; 253
+ 370:	82 b9       	out	0x02, r24	; 2
+ 372:	82 b1       	in	r24, 0x02	; 2
+ 374:	8c 60       	ori	r24, 0x0C	; 12
+ 376:	82 b9       	out	0x02, r24	; 2
+ 378:	0e 94 4c 01 	call	0x298	; 0x298 <LED1_on>
+ 37c:	0e 94 50 01 	call	0x2a0	; 0x2a0 <LED2_on>
+ 380:	08 95       	ret
+
+00000382 <enable_LOCK_PWM>:
+ 382:	e0 eb       	ldi	r30, 0xB0	; 176
+ 384:	f0 e0       	ldi	r31, 0x00	; 0
+ 386:	80 81       	ld	r24, Z
+ 388:	80 64       	ori	r24, 0x40	; 64
+ 38a:	80 83       	st	Z, r24
+ 38c:	08 95       	ret
+
+0000038e <set_LOCK_PWM>:
+}
+
+void set_LOCK_PWM(uint8_t pwm_val){
+	OCR2A = pwm_val;
+ 38e:	80 93 b3 00 	sts	0x00B3, r24	; 0x8000b3 <__TEXT_REGION_LENGTH__+0x7f80b3>
+ 392:	08 95       	ret
+
+00000394 <PWM_init>:
+	}
+}
+/***PWM FUNCS***/
+void PWM_init(){
+	//Initialize Lock-In-PWM-Signal
+	PRR0 &= ~(1<<PRTIM2);				// Power Reduction Register: Timer2 Enable
+ 394:	e4 e6       	ldi	r30, 0x64	; 100
+ 396:	f0 e0       	ldi	r31, 0x00	; 0
+ 398:	80 81       	ld	r24, Z
+ 39a:	8f 7b       	andi	r24, 0xBF	; 191
+ 39c:	80 83       	st	Z, r24
+	TCCR2A=(1<<COM2A0) | (1<< WGM20);	// WGM22:0 = 101 PWM, Phase Correct Mode; COM2A0=1 Toggle on Compare Match
+ 39e:	81 e4       	ldi	r24, 0x41	; 65
+ 3a0:	80 93 b0 00 	sts	0x00B0, r24	; 0x8000b0 <__TEXT_REGION_LENGTH__+0x7f80b0>
+	TCCR2B=(1<<CS21) | (1<<WGM22);		// 1/8 prescaling,
+ 3a4:	8a e0       	ldi	r24, 0x0A	; 10
+ 3a6:	80 93 b1 00 	sts	0x00B1, r24	; 0x8000b1 <__TEXT_REGION_LENGTH__+0x7f80b1>
+	set_LOCK_PWM(62);				// PWM: 10,08 kHz, 50% Duty Cycle
+ 3aa:	8e e3       	ldi	r24, 0x3E	; 62
+ 3ac:	0e 94 c7 01 	call	0x38e	; 0x38e <set_LOCK_PWM>
+ 3b0:	08 95       	ret
+
+000003b2 <_exit>:
+ 3b2:	f8 94       	cli
+
+000003b4 <__stop_program>:
+ 3b4:	ff cf       	rjmp	.-2      	; 0x3b4 <__stop_program>

@@ -97,13 +97,13 @@ void set_MUX(uint8_t channelnumber){					// Sets MUX output channel
 		case 1:{
 			PORTA &= ~((1<<PINA2) | (1<<PINA1));		// Y1: 0b001
 			PORTA |= (1<<PINA3);
-			LED1_on();
+			//LED_toggle(1);
 			break;
 		}
 		case 2:{
 			PORTA &= ~((1<<PINA3) | (1<<PINA1));		// Y2: 0b010
 			PORTA |= (1<<PINA2);
-			LED2_on();
+			//LED_toggle(2);
 			break;
 		}
 		default:	break;
@@ -112,12 +112,12 @@ void set_MUX(uint8_t channelnumber){					// Sets MUX output channel
 /***PWM FUNCS***/
 void PWM_init(){
 	//Initialize Lock-In-PWM-Signal
-	PRR0 &= ~(1<<PRTIM2);				// Power Reduction Register: Timer2 Enable
-	TCCR2A=(1<<COM2A0) | (1<< WGM22);	// Phase Correct Mode; COM2A0=1 / WGM22:1 Toggle on Compare Match
-	TCCR2B=(1<<CS21)| (1<<WGM22);		// 1/8 prescaling,
-	set_LOCK_PWM(96);					// PWM: 50 Hz, 50% Duty Cycle
-	//set_LOCK_PWM(250);				// PWM: 2,50 kHz
-	// set_LOCK_PWM(200);				// PWM: 3,125 kHz
+	PRR0 &= ~(1<<PRTIM2);													// Power Reduction Register: Timer2 Enable
+	TCCR2A=(1<<COM2A0) | (1<< WGM20);										// WGM22:0 = 101 PWM, Phase Correct Mode; COM2A0=1 Toggle on Compare Match
+	TCCR2B=(1<<CS21) | (1<<WGM22);											// 1/8 prescaling,
+	//set_LOCK_PWM(62);														// PWM: 10,08 kHz, 50% Duty Cycle
+	//set_LOCK_PWM(250);													// PWM: 2,50 kHz
+	set_LOCK_PWM(200);														// PWM: 3,125 kHz
 }
 void enable_LOCK_PWM(){
 	TCCR2A |= (1<<COM2A0);				// Phase correct PWM Mode, Toggle OC1A on Compare Match
@@ -139,22 +139,19 @@ void Timer_init() {
 }
 
 void SPI_MasterInit(void)
-{
-	/* Set MOSI and SCK output, all others input */
-	DDR_SPI = (1<<DD_MOSI)|(1<<DD_SCK)|(1<<DD_SS);
-	PORTB|=(1<<DD_SS);
-	/* Enable SPI, Master, set clock rate fck/16 */
-	SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0)|(1<<CPOL);
-
+{	
+	// SPI Clock: 20MHz/8 = 2.5MHz
+	PRR0 &= ~(1<<PRSPI);							// Enable SPI Module (Power Reduction SPI Flag = 0)
+	DDRB=(1<<DD_SS) |(1<<DD_SCK)|(1<<DD_MOSI);
+	SPCR = (1<<MSTR)|(1<<SPR0)|(1<<SPE);			// Config SPI Control Register: Define as Master, transmit MSB first (DORD:0), fosc/8; SPI Enable
+	//SPSR = (1<<SPI2X);								// SPI Double Speed bit (for fosc/8)
 }
 void SPI_MasterTransmit(uint16_t u16Data)
 {
-	PORTB &=~(1<<4);
-	_delay_ms(200);
+	//PORTB&=~(1<<DD_SS);
 	/* Start transmission */
 	SPDR = u16Data;
 	/* Wait for transmission complete */
 	while(!(SPSR & (1<<SPIF)));
-	
 }
 

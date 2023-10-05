@@ -11,7 +11,7 @@
 #define NIRS_FUNC_H_
 
 #ifndef F_CPU
-#define F_CPU 1000000UL
+#define F_CPU 20000000UL
 #endif
 
 #include <avr/io.h>
@@ -23,7 +23,7 @@
 #define DD_MISO 6
 #define DD_SCK 7
 #define DDR_SPI DDRB
-
+#define PORT_SPI PORTB
 
 void set_DAC_level(uint8_t val, uint8_t *currDAClvl);
 void enable_MUX();

@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-main__.c
+main.c
 
 NIRS_func.c
 
